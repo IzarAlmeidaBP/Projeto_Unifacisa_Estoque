@@ -1,0 +1,85 @@
+:root {
+  --roxo: #67518b;
+  --azul--400: #4366a6;
+  --azul-200: #007ab6;
+  --azul-100: #008db7;
+  --azul-50: #009ca9;
+  --verde: #00aa90;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--roxo);
+}
+
+#border-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  height: 300px;
+  width: 200px;
+}
+
+#login {
+  font-size: 24px;
+  color: var(--azul-200);
+  margin-bottom: 20px;
+}
+
+#form-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-cadastro {
+  background-color: #f2f2f2;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 1rem;
+}
+
+#botao-entrar {
+  padding: 10px 20px;
+  background-color: var(--azul-100);
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: var(--verde);
+}
+.seta-voltar {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding: 10px;
+  background-color: var(--azul-200);
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.seta-voltar::before {
+  content: "\2190";
+  margin-right: 5px;
+}
