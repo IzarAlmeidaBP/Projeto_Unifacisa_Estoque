@@ -1,15 +1,15 @@
 :root {
-  /*  --azul-50: #0fc2c0;
+  /*  --beto5: #0fc2c0;
   --azul-100: #0caba8;
   --azul-200: #008f8c;
   --azul-400: #015958;
   --azul--800: #023535; */
-  --roxo: #67518b;
-  --azul--400: #4366a6;
-  --azul-200: #007ab6;
-  --azul-100: #008db7;
-  --azul-50: #009ca9;
-  --verde: #00aa90;
+  --beto1: #c6cca5;
+  --beto2: #88b4c8;
+  --beto3: #8ab8a8;
+  --beto4: #ffffff;
+  --beto5: #6b9997;
+  --beto6: #54787d;
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -23,12 +23,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-image: linear-gradient(
-    to bottom,
-    var(--roxo),
-    var(--azul--400),
-    var(--azul-200)
-  );
+  background-color: var(--beto2);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -36,7 +31,7 @@ body {
 #titulo {
   font-size: 24px;
   margin-bottom: 20px;
-  color: #ffffff;
+  color: black;
 }
 
 .buttons {
@@ -51,20 +46,20 @@ body {
   margin: 10px;
   font-size: 20px;
   text-decoration: none;
-  color: #ffffff;
-  background-color: var(--azul-100);
+  color: black;
+  background-color: var(--beto2);
   border-radius: 10px;
   border: none;
   transition: background-color 0.3s ease;
 }
 
 .admin:hover {
-  background-color: var(--verde);
+  background-color: var(--beto2);
   color: #ffffff;
 }
 .vendedor:hover {
-  background-color: var(--verde);
-  color: #ffffff;
+  background-color: var(--beto2);
+  color: white;
 }
 
 #borda {
@@ -72,13 +67,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  border: 2px solid var(--roxo), var(--azul--400), var(--azul-200);
+  border: 2px solid var(--beto5), var(--beto6), var(--beto4);
   border-radius: 10px;
-  background-image: linear-gradient(
-    to bottom,
-    var(--roxo),
-    var(--azul--400),
-    var(--azul-200)
-  );
-  
+  background-color: var(--beto4);
 }

@@ -1,4 +1,5 @@
 const login = document.querySelectorAll("[data-butao]");
+var botaoEntrar = document.querySelector("#botao-entrar");
 
 login.forEach((abrirPagina) => {
   abrirPagina.addEventListener("click", () => {
@@ -7,8 +8,18 @@ login.forEach((abrirPagina) => {
 });
 const voltarLinks = document.querySelectorAll("[data-voltar]");
 
-voltarLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    window.location.href = "login.html";
+document.addEventListener("DOMContentLoaded", function () {
+  var setaVoltar = document.querySelector(".seta-voltar");
+
+  setaVoltar.addEventListener("click", function (event) {
+    event.preventDefault();
+    window.history.back();
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  botaoEntrar.addEventListener("click", function (event) {
+    event.preventDefault();
+    window.location.href = "controle.html";
   });
 });

@@ -1,10 +1,10 @@
 :root {
-  --roxo: #67518b;
-  --azul--400: #4366a6;
-  --azul-200: #007ab6;
-  --azul-100: #008db7;
-  --azul-50: #009ca9;
-  --verde: #00aa90;
+  --beto1: #c6cca5;
+  --beto2: #4366a6;
+  --beto3: #8ab8a8;
+  --beto4: #008db7;
+  --beto5: #6b9997;
+  --beto6: #54787d;
 }
 
 body {
@@ -18,7 +18,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: var(--roxo);
+  background-color: var(--beto2);
 }
 
 #border-login {
@@ -35,7 +35,7 @@ body {
 
 #login {
   font-size: 24px;
-  color: var(--azul-200);
+  color: var(--beto2);
   margin-bottom: 20px;
 }
 
@@ -56,7 +56,7 @@ body {
 
 #botao-entrar {
   padding: 10px 20px;
-  background-color: var(--azul-100);
+  background-color: var(--beto4);
   color: #ffffff;
   border: none;
   border-radius: 5px;
@@ -65,16 +65,16 @@ body {
 }
 
 button:hover {
-  background-color: var(--verde);
+  background-color: var(--beto6);
 }
 .seta-voltar {
   position: fixed;
   top: 20px;
   left: 20px;
   padding: 10px;
-  background-color: var(--azul-200);
+  background-color: var(--beto2);
   color: #fff;
-  font-size: 16px;
+  font-size: 30px;
   text-decoration: none;
   border-radius: 5px;
 }
