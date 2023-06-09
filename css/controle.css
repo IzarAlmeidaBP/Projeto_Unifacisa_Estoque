@@ -1,14 +1,28 @@
 * {
   box-sizing: border-box;
 }
-
+:root {
+  /*  --beto5: #0fc2c0;
+  --azul-100: #0caba8;
+  --azul-200: #008f8c;
+  --azul-400: #015958;
+  --azul--800: #023535; */
+  --beto1: #c6cca5;
+  --beto2: #5777b2;
+  --beto3: #8ab8a8;
+  --beto4: #ffffff;
+  --beto5: #6b9997;
+  --beto6: #54787d;
+  --beto7: #008db7;
+}
 body {
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-size: 14px;
+  background-color: var(--beto2);
 }
 
 header {
-  background-color: #333;
+  background-color: black;
   height: 3em;
   color: #fff;
   margin-bottom: 1em;
@@ -38,7 +52,7 @@ section h2 {
   font-size: 3em;
   display: block;
   padding-bottom: 0.5em;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #c5c5c5fb;
   margin-bottom: 0.5em;
 }
 
@@ -46,6 +60,7 @@ table {
   width: 100%;
   margin-bottom: 0.5em;
   table-layout: fixed;
+  background-color: white;
 }
 
 td,
@@ -58,11 +73,11 @@ th {
 
 th {
   font-weight: bold;
-  background-color: #eee;
+  background-color: #c3c3c3;
 }
 
 label {
-  color: #555;
+  color: black;
   display: block;
   margin-bottom: 0.2em;
 }

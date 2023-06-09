@@ -5,11 +5,12 @@
   --azul-400: #015958;
   --azul--800: #023535; */
   --beto1: #c6cca5;
-  --beto2: #88b4c8;
+  --beto2: #4366a6;
   --beto3: #8ab8a8;
   --beto4: #ffffff;
   --beto5: #6b9997;
   --beto6: #54787d;
+  --beto7: #008db7;
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -36,8 +37,10 @@ body {
 
 .buttons {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   margin-top: 20px;
+  align-items: center;
 }
 
 .button {
@@ -47,18 +50,19 @@ body {
   font-size: 20px;
   text-decoration: none;
   color: black;
-  background-color: var(--beto2);
+  background-color: var(--beto4);
   border-radius: 10px;
   border: none;
   transition: background-color 0.3s ease;
+ 
 }
 
 .admin:hover {
-  background-color: var(--beto2);
-  color: #ffffff;
+  background-color: var(--beto7);
+  color: white;
 }
 .vendedor:hover {
-  background-color: var(--beto2);
+  background-color: var(--beto7);
   color: white;
 }
 
