@@ -1,9 +1,4 @@
 :root {
-  /*  --beto5: #0fc2c0;
-  --azul-100: #0caba8;
-  --azul-200: #008f8c;
-  --azul-400: #015958;
-  --azul--800: #023535; */
   --beto1: #c6cca5;
   --beto2: #4366a6;
   --beto3: #8ab8a8;
@@ -12,8 +7,9 @@
   --beto6: #54787d;
   --beto7: #008db7;
 }
+
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -52,18 +48,8 @@ body {
   color: black;
   background-color: var(--beto4);
   border-radius: 10px;
-  border: none;
+  border: 0.3px solid black;
   transition: background-color 0.3s ease;
- 
-}
-
-.admin:hover {
-  background-color: var(--beto7);
-  color: white;
-}
-.vendedor:hover {
-  background-color: var(--beto7);
-  color: white;
 }
 
 #borda {
@@ -71,7 +57,12 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  border: 2px solid var(--beto5), var(--beto6), var(--beto4);
+  border: 2px solid var(--beto5);
   border-radius: 10px;
   background-color: var(--beto4);
+}
+.button:hover {
+  background-color: var(--beto7);
+  color: white;
+  cursor: pointer;
 }
