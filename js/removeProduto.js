@@ -1,8 +1,8 @@
-var tabela = document.querySelector("table");
+var tabela = document.querySelector('table');
 
-tabela.addEventListener("dblclick", function (event) {
+tabela.addEventListener('dblclick', function (event) {
   var linhaProduto = event.target.parentNode;
-  linhaProduto.classList.add("fadeOut");
+  linhaProduto.classList.add('fadeOut');
 
   setTimeout(function () {
     linhaProduto.remove();

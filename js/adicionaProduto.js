@@ -1,72 +1,88 @@
-var botaoAdd = document.querySelector("#adicionar-produto");
-botaoAdd.addEventListener("click", function (event) {
-  event.preventDefault();
+import React from 'react';
 
-  var addProduto = document.querySelector("#adiciona-produto");
+class MeuComponente extends React.Component {
+  handleAdicionarProduto = (event) => {
+    event.preventDefault();
 
-  var produto = addDadosProduto(addProduto);
+    const addProduto = document.querySelector('#adiciona-produto');
 
-  var erros = validaProduto(produto);
-  console.log(erros);
-  if (erros.length > 0) {
-    exibeMensagemErro(erros);
-    return;
-  }
+    const produto = this.addDadosProduto(addProduto);
 
-  var tabela = document.querySelector("#tabela-pprodutos");
+    const erros = this.validaProduto(produto);
+    console.log(erros);
+    if (erros.length > 0) {
+      this.exibeMensagemErro(erros);
+      return;
+    }
 
-  tabela.appendChild(criaProduto(produto));
+    const tabela = document.querySelector('#tabela-produtos');
 
-  addProduto.reset();
+    tabela.appendChild(this.criaProduto(produto));
 
-  var mensagemErro = document.querySelector("#produto-erro");
-  mensagemErro.innerHTML = "";
-});
+    addProduto.reset();
 
-function addDadosProduto(addProduto) {
-  var produto = {
-    id: addProduto.id.value,
-    nome: addProduto.nome.value,
-    quantidade: addProduto.quantidade.value,
-    preco: addProduto.preco.value,
+    const mensagemErro = document.querySelector('#produto-erro');
+    mensagemErro.innerHTML = '';
   };
-  return produto;
+
+  addDadosProduto = (addProduto) => {
+    const produto = {
+      id: addProduto.id.value,
+      nome: addProduto.nome.value,
+      quantidade: addProduto.quantidade.value,
+      preco: addProduto.preco.value,
+    };
+    return produto;
+  };
+
+  criaProduto = (produto) => {
+    const produtoTr = document.createElement('tr');
+    produtoTr.classList.add('produtos');
+
+    produtoTr.appendChild(this.infoProduto(produto.id, 'info-id'));
+    produtoTr.appendChild(this.infoProduto(produto.nome, 'info-nome'));
+    produtoTr.appendChild(
+      this.infoProduto(produto.quantidade, 'info-quantidade'),
+    );
+    produtoTr.appendChild(this.infoProduto(produto.preco, 'info-preco'));
+
+    return produtoTr;
+  };
+
+  exibeMensagemErro = (erros) => {
+    const ulErro = document.querySelector('#produto-erro');
+    ulErro.innerHTML = '';
+    erros.forEach((erro) => {
+      const liErro = document.createElement('li');
+      liErro.textContent = erro;
+      ulErro.appendChild(liErro);
+    });
+  };
+
+  infoProduto = (dado, classe) => {
+    const info = document.createElement('td');
+    info.textContent = dado;
+    info.classList.add(classe);
+    return info;
+  };
+
+  validaProduto = (produto) => {
+    const erros = [];
+    if (produto.id.length === 0) erros.push('O ID está inválido');
+    if (produto.nome.length === 0) erros.push('O nome está inválido');
+    if (produto.quantidade.length === 0)
+      erros.push('A quantidade está inválida');
+    if (produto.preco.length === 0) erros.push('O preço está inválido');
+    return erros;
+  };
+
+  render() {
+    return (
+      <div>
+        {/* Coloque aqui o conteúdo JSX relacionado ao seu componente */}
+      </div>
+    );
+  }
 }
 
-function criaProduto(produto) {
-  var produtoTr = document.createElement("tr");
-  produtoTr.classList.add("produtos");
-
-  produtoTr.appendChild(infoProduto(produto.id, "info-id"));
-  produtoTr.appendChild(infoProduto(produto.nome, "info-nome"));
-  produtoTr.appendChild(infoProduto(produto.quantidade, "info-quantidade"));
-  produtoTr.appendChild(infoProduto(produto.preco, "info-preco"));
-
-  return produtoTr;
-}
-
-function exibeMensagemErro(erros) {
-  var ulErro = document.querySelector("#produto-erro");
-  ulErro.innerHTML = "";
-  erros.forEach(function (erro) {
-    var liErro = document.createElement("li");
-    liErro.textContent = erro;
-    ulErro.appendChild(liErro);
-  });
-}
-
-function infoProduto(dado, classe) {
-  var info = document.createElement("td");
-  info.textContent = dado;
-  info.classList.add(classe);
-  return info;
-}
-
-function validaProduto(produto) {
-  var erros = [];
-  if (produto.id.length == 0) erros.push("O ID está inválido");
-  if (produto.nome.length == 0) erros.push("O nome está inválido");
-  if (produto.quantidade.length == 0) erros.push("A quantidade está inválida");
-  if (produto.preco.length == 0) erros.push("O preço está inválido");
-  return erros;
-}
+export default MeuComponente;

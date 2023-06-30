@@ -1,13 +1,13 @@
-/* var formulario = document.querySelector("#adiciona-produto");
-var tabelaProdutos = document.querySelector("#tabela-pprodutos");
+var formulario = document.querySelector('#adiciona-produto');
+var tabelaProdutos = document.querySelector('#tabela-produtos');
 
-formulario.addEventListener("submit", function (event) {
+formulario.addEventListener('submit', function (event) {
   event.preventDefault();
 
-  var idInput = formulario.querySelector("#id");
-  var nomeInput = formulario.querySelector("#nome");
-  var quantidadeInput = formulario.querySelector("#quantidade");
-  var precoInput = formulario.querySelector("#preco");
+  var idInput = formulario.querySelector('#id');
+  var nomeInput = formulario.querySelector('#nome');
+  var quantidadeInput = formulario.querySelector('#quantidade');
+  var precoInput = formulario.querySelector('#preco');
 
   var id = idInput.value;
   var nome = nomeInput.value;
@@ -15,22 +15,22 @@ formulario.addEventListener("submit", function (event) {
   var preco = precoInput.value;
 
   if (verificarIdDuplicado(id)) {
-    alert("O ID do produto já está em uso. Insira um ID único.");
+    alert('O ID do produto já está em uso. Insira um ID único.');
     return;
   }
 
   if (verificarNomeDuplicado(nome)) {
-    alert("O nome do produto já está em uso. Insira um nome único.");
+    alert('O nome do produto já está em uso. Insira um nome único.');
     return;
   }
 
   if (!validarQuantidade(quantidade)) {
-    alert("A quantidade do produto deve ser um número.");
+    alert('A quantidade do produto deve ser um número.');
     return;
   }
 
   if (!validarPreco(preco)) {
-    alert("O preço do produto deve ser um número válido. Exemplo: 10.00");
+    alert('O preço do produto deve ser um número válido. Exemplo: 10.00');
     return;
   }
 
@@ -40,7 +40,7 @@ formulario.addEventListener("submit", function (event) {
 });
 
 function verificarIdDuplicado(id) {
-  var idsProdutos = tabelaProdutos.querySelectorAll(".info-id");
+  var idsProdutos = tabelaProdutos.querySelectorAll('.info-id');
 
   for (var i = 0; i < idsProdutos.length; i++) {
     if (idsProdutos[i].textContent === id) {
@@ -52,7 +52,7 @@ function verificarIdDuplicado(id) {
 }
 
 function verificarNomeDuplicado(nome) {
-  var nomesProdutos = tabelaProdutos.querySelectorAll(".info-nome");
+  var nomesProdutos = tabelaProdutos.querySelectorAll('.info-nome');
 
   for (var i = 0; i < nomesProdutos.length; i++) {
     if (nomesProdutos[i].textContent === nome) {
@@ -68,13 +68,13 @@ function validarQuantidade(quantidade) {
 }
 
 function validarPreco(preco) {
-  var precoNumerico = parseFloat(preco.replace("R$ ", "").replace(",", "."));
+  var precoNumerico = parseFloat(preco.replace('R$ ', '').replace(',', '.'));
   return !isNaN(precoNumerico) && isFinite(precoNumerico);
 }
 
 function adicionarProduto(id, nome, quantidade, preco) {
-  var novaLinha = document.createElement("tr");
-  novaLinha.classList.add("produtos");
+  var novaLinha = document.createElement('tr');
+  novaLinha.classList.add('produtos');
 
   novaLinha.innerHTML = `
     <td class="info-id">${id}</td>
@@ -85,4 +85,3 @@ function adicionarProduto(id, nome, quantidade, preco) {
 
   tabelaProdutos.appendChild(novaLinha);
 }
- */
